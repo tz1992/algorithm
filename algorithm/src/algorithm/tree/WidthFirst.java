@@ -1,14 +1,16 @@
-package algorithm.traversal;
+package algorithm.tree;
 
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /*
  * 树的广度优先遍历
+ * 1.递归的意义不大，就是一层层的向下遍历
+ * 2.非递归
  * 
  */
 public class WidthFirst {
-
+//初始化树，一个根节点最多有三个子节点
 	public static TreeNode initTree() {
 		TreeNode I = new TreeNode("I", null, null, null);
 		TreeNode D = new TreeNode("D", null, null, null);
@@ -21,35 +23,34 @@ public class WidthFirst {
 		TreeNode A = new TreeNode("A", B, null, C);
 		return A;
 	}
-
-	public static void widthFirst(TreeNode root) {
-		Queue<TreeNode> queue = new LinkedList<TreeNode>();
-		TreeNode temp = root;
-		queue.offer(temp);
-		while (queue.size() != 0) {
-			temp = queue.poll();
-			if (temp.firstNode != null) {
-
-				queue.offer(temp.firstNode);
-			}
-			if (temp.secNode != null) {
-
-				queue.offer(temp.secNode);
-			}
-			if (temp.thirdNode != null) {
-
-				queue.offer(temp.thirdNode);
-			}
-       
-			
-			System.out.println(temp.name);
-		}
+    //使用队列来存储树的节点
+	public static void noRecursion(TreeNode root) {
+		Queue<TreeNode>queue=new LinkedBlockingQueue<>();
+		queue.add(root);
+		while (!queue.isEmpty()) {
+         TreeNode node=queue.poll();
+         System.out.print(node.name+" ");
+         if(node.firstNode!=null){
+           queue.add(node.firstNode);
+         }
+         if(node.secNode!=null){
+           queue.add(node.secNode);
+         }
+         if(node.thirdNode!=null){
+           queue.add(node.thirdNode);
+         }
+        }
+		
 	}
 public static void main(String[] args) {
 	TreeNode rNode=initTree();
-	widthFirst(rNode);
+	System.out.print("非递归广度优先遍历：");
+	noRecursion(rNode);
+	
 }
-	static class TreeNode {
+
+
+  static class TreeNode {
 
 		TreeNode firstNode, secNode, thirdNode;
 		String name;
