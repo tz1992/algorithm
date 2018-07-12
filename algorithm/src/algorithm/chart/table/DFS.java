@@ -1,6 +1,6 @@
-package algorithm.chart;
+package algorithm.chart.table;
 /*
- * dfs
+ * DFS 邻接表
  */
 public class DFS {
 public static void main(String[] args) {
