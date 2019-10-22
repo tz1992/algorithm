@@ -20,7 +20,7 @@ public class SelectedSort {
 			int k=i;
 			for (int j = i+1; j < arr.length; j++) {
 				
-				if(arr[j]>=arr[k]){
+				if(arr[j]<=arr[k]){
 					k=j;
 				}
 				

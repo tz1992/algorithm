@@ -67,7 +67,7 @@ public class BinaryTreeTraversal {
 
 	// 非递归中序遍历
 	public void inOrderStack(TreeNode root) {
-          if(root!=null) return;
+          if(root==null) return;
         Stack<TreeNode>stack=new Stack<>();
         while(root!=null||!stack.isEmpty()){
         	while(root!=null){
