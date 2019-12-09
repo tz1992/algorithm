@@ -1,4 +1,4 @@
-package thread;
+package com.tz.algorithm.thread;
 
 import java.util.ArrayList;
 

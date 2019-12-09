@@ -1,4 +1,4 @@
-package LeetCode.binarytree;
+package com.tz.algorithm.binaryTree;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;

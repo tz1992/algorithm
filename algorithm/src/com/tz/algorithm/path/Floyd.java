@@ -1,4 +1,4 @@
-package shortestpath.floyd;
+package com.tz.algorithm.path;
 
 import java.util.ArrayList;
 import java.util.List;

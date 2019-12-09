@@ -1,4 +1,4 @@
-package bag;
+package com.tz.algorithm.bag;
 
 import java.util.Scanner;
 

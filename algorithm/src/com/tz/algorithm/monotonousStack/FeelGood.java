@@ -1,4 +1,4 @@
-package monotonousStack;
+package com.tz.algorithm.monotonousStack;
 
 import java.util.Scanner;
 import java.util.Stack;

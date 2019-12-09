@@ -1,4 +1,4 @@
-package binaryTree;
+package com.tz.algorithm.datastructure;
 
 import java.util.Stack;
 

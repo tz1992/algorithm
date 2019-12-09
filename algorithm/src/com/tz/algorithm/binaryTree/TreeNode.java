@@ -1,4 +1,4 @@
-package LeetCode.binarytree;
+package com.tz.algorithm.binaryTree;
 
 public class TreeNode {
 TreeNode right;

@@ -1,4 +1,4 @@
-package find;
+package com.tz.algorithm.find;
 
 public class BinaryFind {
  //找到返回下标，没有找到返回-1

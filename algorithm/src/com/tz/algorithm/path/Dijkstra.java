@@ -1,4 +1,4 @@
-package shortestpath.dijkstra;
+package com.tz.algorithm.path;
 
 import java.util.Scanner;
 /*

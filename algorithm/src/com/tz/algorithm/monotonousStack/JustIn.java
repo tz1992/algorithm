@@ -1,12 +1,9 @@
-package monotonousStack;
+package com.tz.algorithm.monotonousStack;
 
 import java.util.Stack;
 
 /*
- * 单调栈入门： 求数组 1 6 2 9 4 每个元素向左第一个比自己小的元素的位置，
- * 如果不存在则为0 因此 这个数组 是 0 1 1 3 3
- *  思路1：直接遍历数组 
- *  思路2：使用单调栈
+ * 单调栈入门： 求数组 1 6 2 9 4 每个元素向左第一个比自己小的元素的位置， 如果不存在则为0 因此 这个数组 是 0 1 1 3 3 思路1：直接遍历数组 思路2：使用单调栈
  * 
  */
 public class JustIn {
@@ -45,10 +42,10 @@ public class JustIn {
     }
     return arr1;
   }
-/*
- * 时间复杂度 O(n)
- * 单调栈需要升序
- */
+
+  /*
+   * 时间复杂度 O(n) 单调栈需要升序
+   */
   public static int[] solve2(int[] arr) {
     int[] arr2 = new int[arr.length];
     Stack<Pair> stack = new Stack<>();
@@ -56,22 +53,22 @@ public class JustIn {
     stack.push(new Pair(1, arr[0]));
     int index = 2;
     while (index <= arr.length) {
-      int value = arr[index-1];
+      int value = arr[index - 1];
       while (!stack.isEmpty() && stack.peek().value >= value) {
         stack.pop();
       }
-      
-      if(stack.isEmpty()){
-        arr2[index-1]=0;
-      }else {
-        
-          arr2[index-1]=stack.peek().index;
-         
-        
-      }
-      stack.push(new Pair(index+1, value));
 
-      
+      if (stack.isEmpty()) {
+        arr2[index - 1] = 0;
+      } else {
+
+        arr2[index - 1] = stack.peek().index;
+
+
+      }
+      stack.push(new Pair(index + 1, value));
+
+
       index++;
     }
     return arr2;
@@ -79,7 +76,7 @@ public class JustIn {
   }
 
   public static class Pair {
-  //这里的index表示第index个数，index从1开始，第index数的值为arr[index-1]
+    // 这里的index表示第index个数，index从1开始，第index数的值为arr[index-1]
     int index;
     int value;
 
