@@ -3,8 +3,9 @@ package com.tz.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tz.algorithm.datastructure.TreeData;
-import com.tz.algorithm.entity.Area;
+import com.tz.algorithm.datastructure.Area;
+import com.tz.algorithm.entity.TreeData;
+
 
 public class Utils {
 

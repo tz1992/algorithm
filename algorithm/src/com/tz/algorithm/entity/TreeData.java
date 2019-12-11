@@ -1,4 +1,4 @@
-package com.tz.algorithm.datastructure;
+package com.tz.algorithm.entity;
 
 
 import java.util.ArrayList;

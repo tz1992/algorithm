@@ -1,4 +1,4 @@
-package com.tz.algorithm.entity;
+package com.tz.algorithm.datastructure;
 
 public class Area {
   private String id;
